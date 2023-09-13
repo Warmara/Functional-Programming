@@ -14,3 +14,7 @@ points x = [(-xx,(-yy)) | xx <- [1..x], yy <- [(xx-x)..(x-xx)]]++[(xx,(-yy)) | x
 
 
 
+
+headOrLast :: [String] -> Char -> [String]
+headOrLast str char = [ x | x <- str, (last x == char) ]++[ x | x <- str, (head x == char) ]
+
