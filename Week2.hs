@@ -1,0 +1,9 @@
+
+
+machr :: Float -> Float
+machr age = 
+    if age > 40
+    then 207.0 - 0.7 * age
+    else 220.0 - age
+
+
