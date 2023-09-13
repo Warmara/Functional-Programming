@@ -10,4 +10,7 @@ maxhr age =
 
 
 points :: Int -> [(Int, Int)]
-points x = (zip [0..x-1] [x,x-1..0]) ++ (zip [x,x-1..1] [0,(-1)..(-x)]) ++ (zip [0,(-1)..(-x)+1] [(-x)..(-1)]) ++ (zip [(-x)..0] [0..x])
+points x = [(-xx,(-yy)) | xx <- [1..x], yy <- [(xx-x)..(x-xx)]]++[(xx,(-yy)) | xx <- [0..x], yy <- [(xx-x)..(x-xx)]]
+
+
+
