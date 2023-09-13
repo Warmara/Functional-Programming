@@ -8,3 +8,6 @@ maxhr age =
 
 
 
+
+points :: Int -> [(Int, Int)]
+points x = zip [0..x] [x,x-1..0]
